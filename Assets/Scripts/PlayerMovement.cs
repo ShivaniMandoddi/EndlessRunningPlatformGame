@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float playerJumpSpeed;
     Rigidbody2D rb;
-    
+    public Text scoreText;
     int score;
     float time;
     void Start()
@@ -28,7 +29,8 @@ public class PlayerMovement : MonoBehaviour
         {
             score = score + 1;
             time = 0f;
-            Debug.Log(score);
+            scoreText.text = "Score: " + score;
+            //Debug.Log(score);
         }
     }
   
