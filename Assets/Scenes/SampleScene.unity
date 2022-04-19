@@ -967,7 +967,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1893940757377377510, guid: 57e8fac2a266a7e44a8d9cf3fb1795cf, type: 3}
       propertyPath: m_Name
-      value: Player 1
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1893940757377377512, guid: 57e8fac2a266a7e44a8d9cf3fb1795cf, type: 3}
       propertyPath: m_SortingOrder
@@ -1042,6 +1042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerJumpSpeed: 5
   scoreText: {fileID: 744939524}
+  IsGameOver: 0
 --- !u!1 &1761121915
 GameObject:
   m_ObjectHideFlags: 0

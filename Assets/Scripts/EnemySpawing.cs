@@ -8,10 +8,12 @@ public class EnemySpawing : MonoBehaviour
     public GameObject[] enemies;
     public Stack<GameObject> enemyspawn = new Stack<GameObject>();
     float time;
+    PlayerMovement playerMovement;
     void Start()
     {
         //SpawnEnemy();
         CreateEnemyStack();
+        playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
 
     private void CreateEnemyStack()
@@ -29,15 +31,17 @@ public class EnemySpawing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        time = Time.deltaTime + time;
-        if (time>4f)
+        if (playerMovement.IsGameOver == false)
         {
-            SpawnEnemy();
-            
-            time = 0f;
+
+            time = Time.deltaTime + time;
+            if (time > 4f)
+            {
+                SpawnEnemy();
+
+                time = 0f;
+            }
         }
-        
         
     }
 
